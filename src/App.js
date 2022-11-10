@@ -1,10 +1,14 @@
-import './App.css';
-import Header from './components/Header.js/Header';
+import "./App.css";
+import RegisteredDays from "./components/Days/RegisteredDays";
+import Header from "./components/Layout/Header";
 
 function App() {
   return (
     <div className="App">
-        <Header/>
+      <Header />
+      <main>
+        <RegisteredDays />
+      </main>
     </div>
   );
 }
