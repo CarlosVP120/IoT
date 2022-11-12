@@ -1,0 +1,113 @@
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.btn {
+    background-color: rgb(183, 33, 33);
+}
+
+input {
+    padding: 15px 30px;
+    border-radius: 20px;
+    border: 1px solid #1A8AEB;
+    margin-bottom: 30px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+input:focus {
+    outline: none;
+    padding: 15px 35px;
+}
+
+button {
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: none;
+    background-color: #1A8AEB;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 15px;
+}
+
+button:hover {
+    background-color: #004077;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-left: 35px;
+    padding-right: 35px;
+    cursor: pointer;
+}
+
+.errorMsg {
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.logout {
+    background-color: #000;
+    padding: 10px;
+    font-size: 1rem;
+    position: sticky;
+    top: 0;
+}
+
+.clearDB {
+    background-color: rgb(173, 22, 22);
+    padding: 10px;
+    font-size: 1rem;
+    position: sticky;
+    top: 0;
+}
+
+.logout:hover, .clearDB:hover {
+    background-color: #1A8AEB;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding-left: 13px;
+    padding-right: 13px;
+    cursor: pointer;
+}
+
+.logoutContainer {
+    background-color: transparent;
+    width: 100%;
+    top: 17vh;
+    position: sticky;
+    display: flex;
+    justify-content: right;
+    margin-top: 0.7rem;
+    padding-right: 1.2rem;
+    z-index: 9999999999;
+}
+
+.Logged {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 85vh;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+.login {
+    background-color: rgb(9, 9, 9);
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10vh;
+}

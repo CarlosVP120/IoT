@@ -2,13 +2,12 @@
 
 .day {
   display: flex;
-  float:left;
-  justify-content: space-between;
+  justify-content: center;
   margin: 1rem;
   padding-bottom: 1rem;
   height: auto;
-  font-family: "Nunito", sans-serif;
   border-bottom: 1px solid #ccc;
+  text-align: center;
 }
 
 .day h3 {
@@ -44,4 +43,25 @@
   width: 110%;
   height: 100%;
   
+}
+
+.delete, .update {
+  margin-top: 20px;
+  background-color: rgb(173, 22, 22);
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.update {
+  background-color: #1A8AEB;
+}
+
+.delete:hover, .update:hover {
+  background-color: #094375;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-left: 13px;
+  padding-right: 13px;
+  cursor: pointer;
 }

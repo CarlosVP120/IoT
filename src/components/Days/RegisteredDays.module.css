@@ -1,3 +1,8 @@
+.regDays{
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
 .days {
   max-width: 60rem;
   width: 90%;
