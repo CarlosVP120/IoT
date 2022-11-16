@@ -29,3 +29,12 @@ button:hover {
     padding-right: 35px;
     cursor: pointer;
 }
+
+.ButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    padding-left: 15px;
+}

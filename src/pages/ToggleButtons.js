@@ -55,10 +55,23 @@ function ToggleButtons() {
       });
     };
 
+    // const uploadToggleCourtain = (value) => {
+    //     set(ref(db, `/ToggleStateCourtain`), {
+    //         toggleStateCourtain: value
+    //     });
+    //     Swal.fire({
+    //         position: 'top-end',
+    //         icon: 'success',
+    //         title: 'Successfully updated to ' + value,
+    //         showConfirmButton: false,
+    //         timer: 1500
+    //     })
+    // }
+
     const [selectedTime, setSelectedTime] = useState(null);
 
     const times = [
-    { name: '1 min.', code: '1' },
+    { name: '1 min', code: '1' },
     { name: '2 mins.', code: '2' },
     { name: '3 mins.', code: '3' },
     { name: '4 mins.', code: '4' },
@@ -82,6 +95,11 @@ function ToggleButtons() {
   return (
     <div className={styles.ToggleButtonsPage}>
         <button onClick={WriteToDatabase}>Water {toggleState}</button>
+        {/* <div className={styles.ButtonsContainer}>
+          <button onClick={() => uploadToggleCourtain("Up")}>Courtain Up</button>
+          <button onClick={() => uploadToggleCourtain("Freeze")}>Freeze Courtain</button>
+          <button onClick={() => uploadToggleCourtain("Down")}>Courtain Down</button>
+        </div> */}
         <h2>Time Interval</h2>
         <ListBox value={selectedTime} options={times} onChange={handleIntervalChange} optionLabel="name" style={{ width: '15rem', textAlign:'center'}} />
      </div>
