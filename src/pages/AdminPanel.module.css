@@ -2,7 +2,8 @@
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 30px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin-top: 10vh;
 }
 
 .btn {
@@ -69,7 +70,8 @@ button:hover {
     top: 0;
 }
 
-.logout:hover, .clearDB:hover {
+.logout:hover,
+.clearDB:hover {
     background-color: #1A8AEB;
     color: white;
     font-weight: bold;
@@ -82,11 +84,10 @@ button:hover {
 .logoutContainer {
     background-color: transparent;
     width: 100%;
-    top: 17vh;
+    top: 19vh;
     position: sticky;
     display: flex;
     justify-content: right;
-    margin-top: 0.7rem;
     padding-right: 1.2rem;
     z-index: 9999999999;
 }
@@ -104,10 +105,8 @@ button:hover {
 }
 
 .login {
-    background-color: rgb(9, 9, 9);
     height: 85vh;
-    display: flex;
+    top: 0;
     justify-content: center;
     text-align: center;
-    padding-top: 10vh;
 }

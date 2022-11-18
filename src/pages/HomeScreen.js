@@ -4,9 +4,9 @@ import RegisteredDays from '../components/Days/RegisteredDays'
 function HomeScreen() {
   return (
     <>
-        <RegisteredDays />
+      <RegisteredDays />
     </>
-    
+
   )
 }
 

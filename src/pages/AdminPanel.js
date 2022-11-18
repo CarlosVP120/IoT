@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Login from '../components/LoginForm';
-import {db} from '../firebase';
+import { db } from '../firebase';
 import { remove, ref } from "firebase/database";
 import { getAuth, onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 import Swal from 'sweetalert2';
@@ -30,18 +30,18 @@ function AdminPanel() {
 
   const handeLogin = () => {
     clearErrors();
-      signInWithEmailAndPassword(auth, email, password)
+    signInWithEmailAndPassword(auth, email, password)
       .catch((err) => {
-        switch(err.code) {
+        switch (err.code) {
           case 'auth/invalid-email':
           case 'auth/user-disabled':
           case 'auth/user-not-found':
             setEmailError(err.message);
             break;
-            case 'auth/wrong-password':
-              setPasswordError(err.message);
-              break;
-        default:
+          case 'auth/wrong-password':
+            setPasswordError(err.message);
+            break;
+          default:
         }
       });
   };
@@ -52,7 +52,7 @@ function AdminPanel() {
 
   const authListener = () => {
     onAuthStateChanged(auth, user => {
-      if(user) {
+      if (user) {
         Swal.fire({
           position: 'center',
           icon: 'success',
@@ -98,20 +98,20 @@ function AdminPanel() {
     authListener();
   })
 
-    return (
-        <>
-        { user ? 
-          <div className={styles.Login}>
-            <div className={styles.logoutContainer}>
-              <button className={styles.clearDB} onClick={clearDB}>Clear DB</button>
-              <button className={styles.logout} onClick={handleLogout}>Log Out</button>
-            </div>
-            <RegisteredDays admin={true}/>
+  return (
+    <>
+      {user ?
+        <div className={styles.login}>
+          <div className={styles.logoutContainer}>
+            <button className={styles.clearDB} onClick={clearDB}>Clear DB</button>
+            <button className={styles.logout} onClick={handleLogout}>Log Out</button>
           </div>
+          <RegisteredDays admin={true} />
+        </div>
         : <Login email={email} setEmail={setEmail} password={password} setPassword={setPassword} handeLogin={handeLogin} emailError={emailError} passwordError={passwordError} />
-        }
-        </>
-    )
+      }
+    </>
+  )
 }
 
 export default AdminPanel;

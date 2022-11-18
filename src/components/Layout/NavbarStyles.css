@@ -5,11 +5,14 @@ nav {
     justify-content: space-between;
     background: #1b2430;
     padding: 20px 45px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-    position: sticky; 
-    top: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 2vh;
     z-index: 1000;
     height: 15vh;
+    border-radius: 30px;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 #logo {
@@ -36,10 +39,10 @@ nav {
     position: relative;
 }
 
-#navbar a{
+#navbar a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     transition: 0.3s;
     padding: 10px;
@@ -54,7 +57,7 @@ nav {
     background-color: rgba(255, 255, 255, 0.862);
 } */
 
-#navbar a:hover{
+#navbar a:hover {
     color: #1A8AEB;
     text-decoration: none;
     font-weight: 600;

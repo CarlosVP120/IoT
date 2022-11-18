@@ -7,7 +7,8 @@ export default function Model(props) {
 
   const scene = useRef()
   useFrame(() => {
-    scene.current.rotation.y += 0.01
+    scene.current.rotation.y += 0.0015
+    scene.current.rotation.x += 0.0001
   })
 
   useFrame(({ camera }) => {
