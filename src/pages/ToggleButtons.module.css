@@ -1,41 +1,41 @@
 .ToggleButtonsPage {
-    margin-top: 10vh;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
 }
 
-button {
-    padding: 15px 30px;
-    border-radius: 30px;
-    border: none;
-    background-color: #1A8AEB;
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-bottom: 6vh;
-    margin-right: 0;
+.ToggleButton {
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  background-color: #1a8aeb;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 6vh;
+  margin-right: 0;
 }
 
-button:hover {
-    background-color: #004077;
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
-    padding-left: 35px;
-    padding-right: 35px;
-    cursor: pointer;
+.ToggleButton:hover {
+  background-color: #004077;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-left: 35px;
+  padding-right: 35px;
+  cursor: pointer;
 }
 
 .ButtonsContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    padding-left: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  padding-left: 15px;
 }
