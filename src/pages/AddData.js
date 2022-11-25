@@ -1,10 +1,11 @@
-import React from 'react'
+import React from "react";
 import { db } from "../firebase";
 import { set, ref } from "firebase/database";
 import { useState } from "react";
 
 import styles from "./AddData.module.css";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 function AddData() {
   const [temperature, setTemperature] = useState("");
@@ -44,55 +45,56 @@ function AddData() {
     setDescription("");
 
     Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'Added Correctly',
+      position: "center",
+      icon: "success",
+      title: "Added Correctly",
       showConfirmButton: false,
-      timer: 1500
-    })
+      timer: 1500,
+    });
   };
 
   return (
-    <div className={styles.InputPage}>
-      <input
-      type="text"
-      id={styles.input}
-      value={temperature}
-      onChange={handleTemperatureChange}
-      placeholder="Temperature"
-    />
-    
-    
-    <input
-      type="text"
-      id={styles.input}
-      value={humidity}
-      onChange={handleHumidityChange}
-      placeholder="Humidity"
-    />
-    
-    
-    <input
-      type="text"
-      id={styles.input}
-      value={light}
-      onChange={handleLightChange}
-      placeholder="Light"
-    />
-    
-    
-    <input
-      type="text"
-      id={styles.input}
-      value={description}
-      onChange={handleDescriptionChange}
-      placeholder="Description"
-    />
-    
-    
-    <button onClick={WriteToDatabase}>Submit</button>
-  </div>
-  )
+    <>
+      <Helmet>
+        <title>Add Data</title>
+      </Helmet>
+      <div className={styles.InputPage}>
+        <input
+          type="text"
+          id={styles.input}
+          value={temperature}
+          onChange={handleTemperatureChange}
+          placeholder="Temperature"
+        />
+
+        <input
+          type="text"
+          id={styles.input}
+          value={humidity}
+          onChange={handleHumidityChange}
+          placeholder="Humidity"
+        />
+
+        <input
+          type="text"
+          id={styles.input}
+          value={light}
+          onChange={handleLightChange}
+          placeholder="Light"
+        />
+
+        <input
+          type="text"
+          id={styles.input}
+          value={description}
+          onChange={handleDescriptionChange}
+          placeholder="Description"
+        />
+
+        <button onClick={WriteToDatabase}>Submit</button>
+      </div>
+    </>
+  );
 }
 
-export default AddData
+export default AddData;
